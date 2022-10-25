@@ -7,7 +7,8 @@ from study import study
 def getAccounts():
     result = []
 
-    accountsRaw = os.getenv("ACCOUNTS", "")
+    accountsRaw = os.getenv("ACCOUNTS")
+    assert accountsRaw is not None, "无法获取ACCOUNTS环境变量"
     for account in accountsRaw.split("\n"):
         account = account.strip()
         if account == "":

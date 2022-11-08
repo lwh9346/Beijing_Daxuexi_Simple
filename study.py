@@ -38,7 +38,7 @@ def study(username, password, ua):
             if 'fail' in login_r.text:
                 tryTime += 9
                 raise Exception('Login:账号密码错误')
-            print('登录成功')
+            print('Login:登录成功')
             r = json.loads(bjySession.get("https://m.bjyouth.net/dxx/index").text)
             # "rize" LOL
             if 'newCourse' not in r:
@@ -53,7 +53,7 @@ def study(username, password, ua):
             print(traceback.format_exc())
 
     if not url:
-        print('登入失败,退出')
+        print('Login:登入失败,退出')
         return 0
 
     orgIdTemp = ''

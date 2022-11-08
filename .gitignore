@@ -1,3 +1,5 @@
 /.idea/
 /__pycache__/
 local_only.py
+accounts.txt
+venv
